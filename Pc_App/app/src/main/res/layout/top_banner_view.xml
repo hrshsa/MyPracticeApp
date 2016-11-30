@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?><!--2015/3/25更新：改了点 yanshi-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/app_top_banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="@color/app_primary_color">
+        <!--左侧整体布局-->
+        <FrameLayout
+            android:id="@+id/app_top_banner_left_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/app_top_banner_btn_selector">
+            <!--左侧title-->
+            <TextView
+                android:id="@+id/app_top_banner_left_text"
+                style="@style/top_left_title"
+                android:singleLine="true"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/textsize14"
+                tools:text="左侧" />
+            <!--左侧icon-->
+            <ImageView
+                android:id="@+id/app_top_banner_left_image"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/back_white" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/app_top_banner_left_fame"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/app_top_banner_left_layout"
+            android:layout_alignLeft="@id/app_top_banner_left_layout"
+            android:layout_alignTop="@id/app_top_banner_left_layout"
+            tools:text="左侧占位" />
+        <!--右侧整体布局-->
+        <FrameLayout
+            android:id="@+id/app_top_banner_right_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/app_top_banner_btn_selector">
+            <!--右侧title-->
+            <TextView
+                android:id="@+id/app_top_banner_right_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/textsize14"
+                tools:text="右侧" />
+            <!--右侧icon-->
+            <ImageView
+                android:id="@+id/app_top_banner_right_image"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                 />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/app_top_banner_right_fame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/app_top_banner_right_layout"
+            android:layout_alignRight="@id/app_top_banner_right_layout"
+            android:layout_alignTop="@id/app_top_banner_right_layout"
+            tools:text="右侧占位" />
+        <!--中间整体布局-->
+        <RelativeLayout
+            android:id="@+id/app_top_banner_centre_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/app_top_banner_right_fame"
+            android:layout_toRightOf="@id/app_top_banner_left_fame"
+            android:gravity="center">
+            <!--中间icon-->
+            <ImageView
+                android:id="@+id/app_top_banner_centre_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:gravity="center" />
+            <!--中间文本-->
+            <TextView
+                android:id="@+id/app_top_banner_centre_margin"
+                style="@style/top_center_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/app_top_banner_centre_image"
+                tools:text="" />
+
+            <TextView
+                android:id="@+id/app_top_banner_centre_text"
+                style="@style/app_top_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/app_top_banner_centre_margin"
+                android:layout_gravity="center"
+                android:layout_toLeftOf="@id/app_top_banner_centre_margin"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/textsize16"
+                tools:text="中间" />
+        </RelativeLayout>
+
+        <!--下划线-->
+        <View
+            android:id="@+id/app_top_banner_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/app_secondary_bg"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>
