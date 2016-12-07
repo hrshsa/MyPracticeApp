@@ -36,5 +36,6 @@ public class TopBannerView extends RelativeLayout {
         }
         this.context = context;
         mContentView = LayoutInflater.from(context).inflate(R.layout.top_banner_view, null);
+        addView(mContentView);
     }
 }

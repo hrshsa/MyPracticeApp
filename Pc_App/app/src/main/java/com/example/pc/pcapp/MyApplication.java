@@ -49,7 +49,7 @@ public class MyApplication extends Application {
         Env.screenWidth = rotation == 0 ? metrics.widthPixels : metrics.heightPixels;
         Env.screenHeight = rotation == 0 ? metrics.heightPixels : metrics.widthPixels;
         Env.density = metrics.density;
-        getStatusBarHeight()
+        getStatusBarHeight();
     }
 
     /**

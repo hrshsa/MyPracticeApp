@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_activity_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="none"
+    android:fadingEdgeLength="0dp"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:orientation="vertical">
+
+        <com.example.pc.pcapp.view.TopBannerView
+            android:id="@+id/top_banner_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dp" />
+        <!--显示子类布局的内容-->
+        <FrameLayout
+            android:id="@+id/contentLL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dp"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+    <!--夜间模式的浮层-->
+    <LinearLayout
+        android:id="@+id/app_night_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a8000000"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+</FrameLayout>
